@@ -1,6 +1,6 @@
 <?php
     // if (isset($_POST['who']) && isset($_POST['pass']) && ($_POST['pass'])=="php123"){
-    //     header("Location: autos.php?name=".urlencode($_POST['who']));
+    //     header("Location: homepage.php?name=".urlencode($_POST['who']));
     // }
     if (isset($_POST['cancel'])){
         header("Location: index.php");
@@ -18,11 +18,10 @@
         }
         // else if(strpos($_POST['who'], '@') == false){
         //     $failure = "Email must have an at-sign (@)";
-         else {
+        else {
             $check = hash('md5', $_POST['pass']);
             if ( $check == $stored_hash ) {
-                // Redirect the browser to autos.php
-                header("Location: .php?name=".urlencode($_POST['who']));
+                header("Location: homepage.php?name=".urlencode($_POST['who']));
                 error_log("Login success ".$_POST['who']);
 
                 return;
@@ -39,7 +38,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RoronoaSaurav's Automobile Tracker</title>
+    <title>RoronoaSaurav's Login</title>
 </head>
 <body>
     <div class="container">
@@ -50,19 +49,12 @@
         }
     ?>
     <form method="POST">
-    <label for="nam">User Name</label>
-    <input type="text" name="who" id="nam"><br/>
-    <label for="id_1723">Password</label>
-    <input type="text" name="pass" id="id_1723"><br/>
-    <input type="submit" value="Log In">
-    <input type="submit" name="cancel" value="Cancel">
+        <label for="nam">User Name</label>
+        <input type="text" name="who" id="nam"><br/>
+        <label for="id_1723">Password</label>
+        <input type="text" name="pass" id="id_1723"><br/>
+        <input type="submit" value="Log In">
+        <input type="submit" name="cancel" value="Cancel">
     </form>
-    <p>
-    For a password hint, view source and find a password hint
-    in the HTML comments.
-    <!-- Hint: The password is the three character name of the 
-    programming language used in this class (all lower case) 
-    followed by 123. -->
-    </p>
 </body>
 </html>

@@ -5,238 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        
-        ul,
-        li,
-        a {
-            list-style: none;
-            text-decoration: none;
-        }
-        
-        .nav_bar {
-            padding: 4px;
-            padding-left: 25px;
-            padding-right: 25px;
-            background: #77E583;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        .logo {
-            width: 200px;
-        }
-        
-        .logo_div {
-            display: inline;
-        }
-        
-        .nav_bar input {
-            border-radius: 20px;
-            height: 45px;
-            padding: 3px;
-            font-size: 17px;
-            border: none;
-            color: #979797;
-            width: 35%;
-            padding-left: 20px;
-        }
-        
-        .header .nav_bar input[type="text"]:active {
-            border: none;
-            outline: none;
-        }
-        
-        input[type=text] {
-            border: none;
-            outline: none;
-            font-size: 17px;
-        }
-        
-        .login_cart span {
-            color: #ffffff;
-            font-size: 25px;
-            margin: 10px;
-        }
-        .login_cart:hover{
-            cursor: pointer;;
-        }
-        
-        .login_cart span sup {
-            position: relative;
-            top: -10px;
-        }
-        
-        .user_icon {
-            margin-right: 20px;
-        }
-        
-        .user_span {
-            border-right: solid 1px rgb(236, 236, 236);
-            padding-right: 20px;
-            height: 90px;
-        }
-        .btn1{
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            margin-left: -24%;
-            margin-top: 0.3%;
-            padding-right: 5%;
-            border: none;
-            background-color: transparent;
-            cursor: pointer;
-            opacity: 0.4;
-            overflow: hidden;
-        }
-        .btn1:hover{
-            opacity: 0.9;
-        }
-        
-        .categories {
-            background-color: rgb(255, 255, 255);
-            padding: 15px;
-            gap: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            box-shadow: 0px 10px 16px 0px rgba(190, 190, 190, 0.75);
-            -webkit-box-shadow: 0px 10px 16px 0px rgba(190, 190, 190, 0.75);
-            -moz-box-shadow: 0px 10px 16px 0px rgba(190, 190, 190, 0.75);
-        }
-        
-        .categories a {
-            color: #666;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-            letter-spacing: -0.6px;
-        }
-        
-        .categories a :hover {
-            transition: all;
-        }
-        .slider {
-            width: 800px; 
-            height: 600px; 
-            margin: 0 auto;
-            overflow: hidden;
-            position: relative;
-            padding: 20px; 
-        }
-
-        .image-container {
-            width: 2400px; 
-            background-color: none;
-            height: 600px; 
-            clear: both;
-            position: relative;
-            animation: slide 15s linear infinite;
-        }
-
-        .slide-container {
-            float: left;
-            margin: 0;
-            padding: 0;
-            width: 800px; 
-            height: 450px;
-        }
-
-        .slide {
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-            position: relative;
-        }
-
-        .dots-container {
-            text-align: center;
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
-        }
-
-        .dot {
-            width: 10px;
-            height: 10px;
-            background-color: #666;
-            border-radius: 50%;
-            display: inline-block;
-            margin: 0 5px;
-        }
-
-        .dot.active {
-            background-color: #fff;
-        }
-
-        .image-container {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        @keyframes slide {
-            0% {
-                left: 0;
-            }
-            16.66% {
-                left: 0;
-            }
-            33.33% {
-                left: -800px;
-            }
-            50% {
-                left: -800px;
-            }
-            66.67% {
-                left: -1600px;
-            }
-            83.33% {
-                left: -1600px;
-            }
-            100% {
-                left: -2400px;
-            }
-        }
-
-        /* footer */
-        footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            display: flex;
-            background-color: #77E583;
-            height: 30%;
-            width: 100%;
-            flex-direction: column;
-            align-items: center;
-            padding: 30px;
-        }
-        
-        i {
-            font-size: 35px;
-        }
-        
-        .footer_logos {
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
-        }
-        
-        .fa-brands {
-            margin-right: ;
-        }
-       </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
@@ -279,6 +49,80 @@
             <span class="dot active"></span>
             <span class="dot"></span>
             <span class="dot"></span>
+        </div>
+    </div>
+
+    <!-- product view/edit part -->
+    <div class="products">
+        <h2>Today's Top picks</h2>
+        <h3 class="colr">See more ></h3>
+    </div>
+
+    <div class="product-container">
+        <div class="image-container1">
+            <div class="detailing">
+                <img src="./assets/Images/razor.png" alt="razor">
+                <p>Razor</p>
+                <p class="ok">Rs.120</p>
+                <p class="ok" style="color: black;">Qty</p>
+                <div class="option">
+                    <button class="btn3">-</button>
+                    <button class="btn2"></button>
+                    <button class="btn3">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="image-container1">
+            <div class="detailing">
+                <img src="./assets/Images/bread.png" alt="bread">
+                <p>Bread</p>
+                <p class="ok">Rs.60</p>
+                <p class="ok" style="color: black;">Qty</p>
+                <div class="option">
+                    <button class="btn3">-</button>
+                    <button class="btn2"></button>
+                    <button class="btn3">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="image-container1">
+            <div class="detailing">
+                <img src="./assets/Images/Cheetos.png" alt="cheetos">
+                <p>Cheetos</p>
+                <p class="ok">Rs.320</p>
+                <p class="ok" style="color: black;">Qty</p>
+                <div class="option">
+                    <button class="btn3">-</button>
+                    <button class="btn2"></button>
+                    <button class="btn3">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="image-container1">
+            <div class="detailing">
+                <img src="./assets/Images/milk.png" alt="milk">
+                <p>milk</p>
+                <p class="ok">Rs.80</p>
+                <p class="ok" style="color: black;">Qty</p>
+                <div class="option">
+                    <button class="btn3">-</button>
+                    <button class="btn2"></button>
+                    <button class="btn3">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="image-container1">
+            <div class="detailing">
+                <img src="./assets/Images/rice.png" alt="rice">
+                <p>Rice</p>
+                <p class="ok">Rs.70</p>
+                <p class="ok" style="color: black;">Qty</p>
+                <div class="option">
+                    <button class="btn3">-</button>
+                    <button class="btn2"></button>
+                    <button class="btn3">+</button>
+                </div>
+            </div>
         </div>
     </div>
 
