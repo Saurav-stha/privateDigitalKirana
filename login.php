@@ -55,6 +55,7 @@
         <input type="text" name="pass" id="id_1723"><br/>
         <input type="submit" value="Log In">
         <input type="submit" name="cancel" value="Cancel">
+        <p>Don't have an account? <a href="./signup.php">Signup</a></p>
     </form>
 </body>
 </html>
