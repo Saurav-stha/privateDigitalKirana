@@ -15,7 +15,7 @@
             <div class="logo_div"><img src="./assets/img/logo_updated.png" alt="" class="logo"></div>
             <input type="text" placeholder="Search the products">
             <button class="btn1"><img src="./assets/img/search.png" alt="search" height="10%" width="10%"></button>
-            <div class="login_cart"> <span class="user_span"><i class="fa-solid fa-user user_icon" style="color: #ffffff; "></i><?php echo $_GET['name']; ?></span>
+            <div class="login_cart"> <span class="user_span"><i class="fa-solid fa-user user_icon" style="color: #ffffff; "></i><<?php echo $_GET['name']; ?></span>
                 <span><a href="cart.php"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a><sup>0</sup></span>
             </div>
         </nav>
@@ -125,50 +125,5 @@
             </div>
         </div>
     </div>
-
-    <footer>
-        <div class="footer_logos"> <span><i class="fa-brands fa-facebook" style="color: #4c525d;"></i></span>
-            <span><i class="fa-brands fa-instagram" style="color: #414958;"></i></span>
-            <span><i class="fa-brands fa-x-twitter" style="color: #2e333e;"></i></span>
-            <span><i class="fa-brands fa-tiktok" style="color: #2e3542;"></i></span>
-        </div>
-    </footer>
-    <script>
-        let currentSlide = 1;
-        const slideContainers = document.querySelectorAll('.slide-container');
-        const dots = document.querySelectorAll('.dot');
-        
-        function nextSlide() {
-            if (currentSlide < slideContainers.length) {
-                currentSlide++;
-            } else {
-                currentSlide = 1;
-                slideContainers[0].style.left = '0';
-            }
-
-            updateSlide();
-        }
-
-        function updateSlide() {
-            slideContainers.forEach((container, index) => {
-                if (index === currentSlide - 1) {
-                    container.style.left = '0';
-                    dots[index].classList.add('active');
-                } else {
-                    container.style.left = '100%';
-                    dots[index].classList.remove('active');
-                }
-            });
-        }
-
-        setInterval(nextSlide, 8000); // Auto slideshow every 8 seconds with a seamless transition
-    </script>
-    </script>
-    
-</body>
-
-</html>
-
-
-
-
+<?php 
+include "includes/footer.php";?>

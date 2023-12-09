@@ -27,6 +27,7 @@ if (isset($_SESSION['user'])){
             <h2 style="color: #2a2a2a; font-family: 'Open Sans', sans-serif; font-weight: 200;">Sign Up</h2>
             <?php
             if (isset($_POST['submit'])){
+            require "./database.php";
             $firstname = $_POST["firstName"];
             $lastname=$_POST["lastName"];
             $contact =$_POST["phoneNumber"];
@@ -37,7 +38,7 @@ if (isset($_SESSION['user'])){
             
             $passwordHash = password_hash($password,PASSWORD_DEFAULT);
             $errors = array();
-            require "./database.php";
+            
             $sql = "SELECT * FROM customers WHERE email = '$email'";
             $result = mysqli_query($conn,$sql);
             $rowCount = mysqli_num_rows($result);
