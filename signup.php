@@ -1,7 +1,7 @@
 <?php 
 session_start();
-if (isset($_SESSION['user'])){
-    header("Location: index.php");
+if (isset($_SESSION['username'])){
+    header("Location: homepage.php");
 }
 // global $rowCount,$errors;
 
@@ -27,7 +27,7 @@ if (isset($_SESSION['user'])){
             <h2 style="color: #2a2a2a; font-family: 'Open Sans', sans-serif; font-weight: 200;">Sign Up</h2>
             <?php
             if (isset($_POST['submit'])){
-            require "./database.php";
+            require "./core/init.php";
             $firstname = $_POST["firstName"];
             $lastname=$_POST["lastName"];
             $contact =$_POST["phoneNumber"];
@@ -36,7 +36,7 @@ if (isset($_SESSION['user'])){
             $password = $_POST["password"];
             $confirmPassword = $_POST['confirmPassword'];
             
-            $passwordHash = password_hash($password,PASSWORD_DEFAULT);
+            $passwordHash = hash('md5', $_POST['password']);
             $errors = array();
             
             $sql = "SELECT * FROM customers WHERE email = '$email'";

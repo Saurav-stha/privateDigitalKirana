@@ -12,10 +12,10 @@
 <body>
     <div class="header">
         <nav class="nav_bar">
-            <div class="logo_div"><img src="./assets/img/logo_updated.png" alt="" class="logo"></div>
+            <div class="logo_div"><img src="./assets/Images/logo_updated.png" alt="" class="logo"></div>
             <input type="text" placeholder="Search the products">
-            <button class="btn1"><img src="./assets/img/search.png" alt="search" height="10%" width="10%"></button>
-            <div class="login_cart"> <span class="user_span"><i class="fa-solid fa-user user_icon" style="color: #ffffff; "></i><<?php echo $_GET['name']; ?></span>
+            <button class="btn1"><img src="./assets/Images/search.png" alt="search" height="10%" width="10%"></button>
+            <div class="login_cart"> <span class="user_span"><i class="fa-solid fa-user user_icon" style="color: #ffffff; "></i><?php session_start(); echo $_SESSION['username']; ?></span>
                 <span><a href="cart.php"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a><sup>0</sup></span>
             </div>
         </nav>
@@ -31,18 +31,18 @@
         <a href="#">Dairy</a>
         <a href="#">Oils</a>
         <a href="#">Cleaning Products</a>
-
+        <a href="./core/logout.php">Logout</a> <!-- NOT SUPPOSED TO BE HERE -->
     </div>
     <div class="slider">
         <div class="image-container">
             <div class="slide-container">
-                <img src="./assets/img/grocery2.png" class="slide">
+                <img src="./assets/Images/grocery2.png" class="slide">
             </div>
             <div class="slide-container">
-                <img src="./assets/img/grocery.png" class="slide">
+                <img src="./assets/Images/grocery.png" class="slide">
             </div>
             <div class="slide-container">
-                <img src="./assets/img/discount.jpg" class="slide">
+                <img src="./assets/Images/discount.jpg" class="slide">
             </div>
         </div>
         <div class="dots-container">
