@@ -36,7 +36,7 @@
     <div class="slider">
         <div class="image-container">
             <div class="slide-container">
-                <img src="./assets/Images/grocery2.png" class="slide">
+                <img src="./assets/Images/grocery1.png" class="slide">
             </div>
             <div class="slide-container">
                 <img src="./assets/Images/grocery.png" class="slide">

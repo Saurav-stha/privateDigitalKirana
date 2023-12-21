@@ -1,4 +1,5 @@
-<footer>
+    <!-- footer -->
+    <footer>
         <div class="footer_logos">
             <span><a href="" class="facebook-link">
                 <i class="fa-brands fa-facebook footer-logo"></i>
@@ -25,36 +26,25 @@
         </div>
         <span class="copyright">Copyright © 2023 beasty corp</span>
     </footer>
-    <script>
-        let currentSlide = 1;
-        const slideContainers = document.querySelectorAll('.slide-container');
-        const dots = document.querySelectorAll('.dot');
-        
-        function nextSlide() {
-            if (currentSlide < slideContainers.length) {
-                currentSlide++;
-            } else {
-                currentSlide = 1;
-                slideContainers[0].style.left = '0';
-            }
+    <script>    
+        const image = document.querySelectorAll('.slide-container img');
+        let index = 0;
 
-            updateSlide();
+        function showNextImage(){
+            image[index].style.opacity = 0;
+            index = (index + 1) % image.length;
+            image[index].style.opacity = 1;
         }
 
-        function updateSlide() {
-            slideContainers.forEach((container, index) => {
-                if (index === currentSlide - 1) {
-                    container.style.left = '0';
-                    dots[index].classList.add('active');
-                } else {
-                    container.style.left = '100%';
-                    dots[index].classList.remove('active');
-                }
-            });
-        }
+        setInterval(showNextImage, 4000);
 
-        setInterval(nextSlide, 8000); // Auto slideshow every 8 seconds with a seamless transition
+        // popup
+        document.querySelector("#show-login").addEventListener("click",function(){
+  document.querySelector(".popup").classList.add("active");
+});
+document.querySelector(".popup .close-btn").addEventListener("click",function(){
+  document.querySelector(".popup").classList.remove("active");
+});
     </script>
-    </script>
-    
+</body>
 </html>

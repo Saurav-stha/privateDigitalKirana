@@ -7,26 +7,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="./css/index.css">
+    
+    <link rel="stylesheet" href="./popup.css">
 </head>
 <body>
-    <div class="navbar-container">
-        <div id="logo-container">
-            <img src="logo.png" alt="logo" id="logo">
+<div class="navbar-container">
+    <div id="logo-container">
+        <img src="logo.png" alt="logo" id="logo">
+    </div>
+    <span id="search-bar">
+        <i id="search-icon" class="fas fa-search"></i>
+        <input type="text" placeholder="Search for products">
+    </span>
+    <div class="login-content">
+        <span><i id="user-icon" class="fa-solid fa-user"></i></span>
+        <!-- popup login -->
+        <div class="center">
+            <button id="show-login"><a href="#" id="button" class="button">Login</a></button>
         </div>
-        <span id="search-bar">
-            <i id="search-icon" class="fas fa-search"></i>
-            <input type="text" placeholder="Search for products">
-        </span>
-        <div class="login-content">
-            <span><i id="user-icon" class="fa-solid fa-user"></i></span>
-            <!-- <span id="login-button"> -->
-                <!-- popup login -->
-            <div class="center">
-                <button id="show-login"><a href="#" id="login-button" class="button">Login</a></button>
-            </div>
-            <!-- </span> -->
-            <span id="bar-line"></span>
+    </div>
+</div>
+<span id="bar-line"></span>
             <span><i id="shopping-cart" class="fa-solid fa-cart-shopping"></i><sup>0</sup></span>
         </div>
     </div>
@@ -39,7 +40,8 @@
         <span><a href="#">Dairy</a></span>
         <span><a href="#">Personal Care</a></span>
     </div>
-    <div class="slide-container">
+<!-- Hero Image -->
+<div class="slide-container">
         <img src="https://picsum.photos/id/236/1000/500" alt="grocery" class="slider">
         <img src="https://picsum.photos/id/237/1000/500" alt="discount" class="slider">
         <img src="https://picsum.photos/id/238/1000/500" alt="discount" class="slider">   
@@ -55,7 +57,9 @@
         </div>
         <span><img src="grocery1.png" alt="grocery1" id="grocery1"></span>
     </div>
-    <div class="hot-topic">
+
+<!-- Card Section -->
+<div class="hot-topic">
         <span><p>Featured Products</p></span>
         <span><p style="font-weight: bold; color: #43d449; cursor: pointer;">See more ></p></span>
     </div>
@@ -358,39 +362,11 @@
             <div class="cart-button"><i id="shopping-carts" class="fa-solid fa-cart-shopping"></i><input type="submit" value="Add to cart" id="cart"></div>
         </div>
     </div>
-<!-- footer -->
-    <footer>
-        <div class="footer_logos">
-            <span><a href="" class="facebook-link">
-                <i class="fa-brands fa-facebook footer-logo"></i>
-            </a></span>
-            <span><a href="" class="instagram-link">
-                <i class="fa-brands fa-instagram footer-logo"></i>
-            </a></span>
-            <span><a href="" class="x-link">
-                <i class="fa-brands fa-x-twitter footer-logo"></i>
-            </a></span>
-            <span><a href="" class="tiktok-link">
-                <i class="fa-brands fa-tiktok footer-logo"></i>
-            </a></span>
-        </div>
-        <div class="footer-navs">
-            <a href="#" class="footer-home footer-nav-link">Home</a>
-            <a href="#" class="footer-about footer-nav-link">About Us</a>
-            <a href="#" class="footer-customer footer-nav-link">Customer Support</a>
-        </div>
-        <div class="footer-contact">
-            <span class="footer-contact-items"><i class="fa-solid fa-mobile-screen"></i></i> +977 XXXXXXX </span>
-            <span class="footer-contact-items"><i class="fa-solid fa-location-dot"></i> Newroad,Pokhara</span>
-            <span class="footer-contact-items"><i class="fa-solid fa-envelope"></i> info@gmail.com</span>
-        </div>
-        <span class="copyright">Copyright © 2023 beasty corp</span>
-    </footer>
 
 <!-- Modal Section -->
 
-    <div class="bg-modal">
-	    <div class="modal-contents">
+<div class="bg-modal">
+	<div class="modal-contents">
 
 		<div class="close">+</div>
 		<img src="https://richardmiddleton.me/comic-100.png" alt="">
@@ -408,26 +384,16 @@
             </form>
 
 	</div>
-    
-<script>
-    document.getElementById('login-button').addEventListener("click", function() {
-        document.querySelector('.bg-modal').style.display = "flex";
-    });
+    <script>
+        document.getElementById('button').addEventListener("click", function() {
+            document.querySelector('.bg-modal').style.display = "flex";
+        });
 
-    document.querySelector('.close').addEventListener("click", function() {
-        document.querySelector('.bg-modal').style.display = "none";
-    });
+        document.querySelector('.close').addEventListener("click", function() {
+            document.querySelector('.bg-modal').style.display = "none";
+        });
+    </script>
+</div>
 
-    const image = document.querySelectorAll('.slide-container img');
-    let index = 0;
-
-    function showNextImage(){
-        image[index].style.opacity = 0;
-        index = (index + 1) % image.length;
-        image[index].style.opacity = 1;
-    }
-
-    setInterval(showNextImage, 4000);
-</script>
-</body>
-</html>
+    </body>
+    </html>

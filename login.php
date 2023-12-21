@@ -109,7 +109,7 @@
     </style>
 </head>
 <body>
-    <div class="login-container">
+    <!-- <div class="login-container">
         <div class="close-button" onclick="closeLogin()">✕</div>
         <div class="image-content">
             <img src="./assets/Images/login.png" alt="">
@@ -123,12 +123,40 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
 
-                <h3><span><p>Forgot password?</p></span></h3>
+                <h3><span><p><a href="">Forgot password?</a></p></span></h3>
                 <input type="submit" name="submit" value="Login" id="submit-button">
                 <span><p>Don't have an account?<a href="signup.php">Create now</a></p></span>
             </form>
         </div>
+    </div> -->
+<div class="center">
+  <button id="show-login">Login</button>
+</div>
+<div class="popup">
+  <div class="close-btn">&times;</div>
+  <div class="form">
+    <h2>Log in</h2>
+    <div class="form-element">
+      <label for="email">Email</label>
+      <input type="text" id="email" placeholder="Enter email">
     </div>
+    <div class="form-element">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter password">
+    </div>
+    <div class="form-element">
+      <input type="checkbox" id="remember-me">
+      <label for="remember-me">Remember me</label>
+    </div>
+    <div class="form-element">
+      <button>Sign in</button>
+    </div>
+    <div class="form-element">
+      <a href="#">Forgot password?</a>
+    </div>
+  </div>
+</div>
+
     <?php 
         if (isset($_POST['submit'])){
             $username = $_POST['username'];
