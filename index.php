@@ -25,7 +25,6 @@
             <div class="center">
                 <button id="show-login"><a href="#" id="login-button" class="button">Login</a></button>
             </div>
-            <!-- </span> -->
             <span id="bar-line"></span>
             <span><i id="shopping-cart" class="fa-solid fa-cart-shopping"></i><sup>0</sup></span>
         </div>
